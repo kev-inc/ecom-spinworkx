@@ -1,12 +1,10 @@
-import Link from 'next/link'
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function IndexPage() {
-  return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </div>
-  )
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/main");
+  });
+  return <div>Loading...</div>;
 }
